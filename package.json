@@ -10,7 +10,28 @@
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.40.1",
-    "@types/node": "^20.11.0"
+    "@types/node": "^20.11.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.2"
   },
-  "scripts": {}
+  "scripts": {
+    "prepare": "husky install",
+    "ui": "npx playwright test --ui",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.tsx": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
