@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "yarn": "^1.22.21"
+  },
+  "name": "well-well",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dz1dz1on/well-well.git",
+  "author": "dz1dz1on <k.stepniak@vasco-electronics.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.11.0"
+  },
+  "scripts": {}
+}
