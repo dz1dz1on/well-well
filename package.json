@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@playwright/test": "^1.48.0",
     "yarn": "^1.22.21"
   },
   "name": "well-well",
@@ -9,7 +10,6 @@
   "author": "dz1dz1on <k.stepniak@vasco-electronics.com>",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
