@@ -21,8 +21,9 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
+    "test": "npx playwright test",
     "prepare": "husky install",
-    "ui": "npx playwright test --ui",
+    "test:ui": "npx playwright test --ui",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier . --check",

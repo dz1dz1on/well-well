@@ -1,7 +1,8 @@
 import { test, expect } from "@playwright/test";
+import { LandingPage } from "../page-objects/landingPage";
 
 test("has title", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
+  await page.goto("");
   const array = page.locator(".col.col--6");
 
   for (let i = 0; i < (await array.count()); i++) {
@@ -11,12 +12,11 @@ test("has title", async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test("get started link", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
+test("check steps", async ({ page }) => {
+  const landingPage = new LandingPage(page);
 
-  // Click the get started link.
-  await page.getByRole("link", { name: "Get started" }).click();
+  await page.goto("");
+  await landingPage.searchInDocs("Locator");
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole("heading", { name: "Installation" })).toBeVisible();
+  await expect(page).toHaveTitle(/Locators/);
 });
